@@ -16,9 +16,9 @@
 	<div class="col-sm-3 sidebar">
 		<ul class="nav">
 			<li class="active"><a href="#">Ayush Anand's Blog</a>
-			<li><a href="#">Link 1</a></li>
-              		<li><a href="#">Link 2</a></li>
-              		<li><a href="#">Link 3</a></li>
+			{% for post in site.posts %}
+				<li><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></li>
+			{% endfor %}
 		</ul>
 	</div>
 </body>
