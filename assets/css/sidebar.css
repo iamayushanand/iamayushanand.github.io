@@ -6,3 +6,7 @@
   background-color: black;
   position: absolute;
 }
+
+.BgHover:hover {
+	background-color:violet;
+}
