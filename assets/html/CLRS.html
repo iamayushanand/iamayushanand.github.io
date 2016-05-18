@@ -1,8 +1,6 @@
 ---
 layout: default
 title: Project CLRS
-blogposts:
- - test.markdown
 ---
 
 <html>
@@ -10,8 +8,8 @@ blogposts:
 		<H1>blogs about CLRS(Abbr. for Introduction to Algorithms)</H1>
 
 		<div class="blogs">
-			{% for post in page.blogposts %}
-			<a href="http://iamayushanand.github.io/assets/html/CLRS/{{post}}">{{post}}</a>
+			{% for post in site.categories.clrs %}
+			<a href="{{post.url}}">{{post.title}}</a>
 			{% endfor %}
 		</div>
 	</body>
