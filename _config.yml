@@ -9,9 +9,13 @@
 title: Ayush Anand's Blog 
 email: iamayushanand@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Welcome to my blog which contains codes from CLRS
-  and my solutions to the problems on online judges like codeforces
-  topcoder etc. Please feel free to contribute
+  Hi my name is Ayush and I am a competitive coder 
+  my handle on most competitive websites is FanOfTourist
+  I will be maintaining two projects 
+  one of them is clrs in which I will post my codes on the algorithms given in the book Introduction to Algorithms 3rd edition
+  this book is very recommended according to me
+  second project is called Competitive Programming in which I store
+  My solutions to some of the competitive programming problem
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://iamayushanand.github.io" # the base hostname & protocol for your site
 github_username:  iamayushanand

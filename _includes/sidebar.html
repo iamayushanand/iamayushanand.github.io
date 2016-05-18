@@ -13,12 +13,21 @@
 </head>
 
 <body>
-	<div class="col-sm-3 sidebar">
+	<div class="col-sm-4 sidebar">
+		<img src="http://iamayushanand.github.io/assets/images/profile.jpg" style="margin-left:100px;border-radius:50%;width: 100px;height: 100px" class="img-circle">
+		<p style="color:whitesmoke;">{{ site.description }}</p>
+		
+
+		  <div class="links" style="margin-left: 100px;">
+			  <li>{% include icon-github.html username=site.github_username %}</li>
+			  <li>{% include icon-codeforces.html username=site.codeforces_username %}</li>	  
+		  </div>
+		  <hr>
 		<ul class="nav">
-			<li class="BgHover active"><a href="http://iamayushanand.github.io">Ayush Anand's Blog</a>
+			<li class="active"><a href="http://iamayushanand.github.io">Ayush Anand's Blog</a>
 			
-			<li><a href="http://iamayushanand.github.io/assets/html/CLRS.html" class="BgHover" style="color:white;">Project CLRS</a></li>
-			<li><a href="http://iamayushanand.github.io/assets/html/CP.html" class="BgHover" style="color:white;">Project Competitive Programming</a></li>
+			<li><a href="http://iamayushanand.github.io/assets/html/CLRS.html"  style="color:white;">Project CLRS</a></li>
+			<li><a href="http://iamayushanand.github.io/assets/html/CP.html"  style="color:white;">Project Competitive Programming</a></li>
 			<li><a href="http://iamayushanand.github.io/assets/html/MISC.html" class="BgHover" style="color:white;">Miscellanious</a></li>
 
 
