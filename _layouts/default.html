@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html>
+	<style>
+	
+         .PageNavigation {
+  font-size: 14px;
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
 
+.PageNavigation a {
+  display: block;
+  width: 50%;
+  float: left;
+  margin: 1em 0;
+}
+
+.PageNavigation .next {
+  text-align: right;
+}
+	
+  </style>
   {% include head.html %}
 
   <body>
@@ -14,6 +34,14 @@
     </div>
 
     <!--    {% include footer.html %} --!>
+    <div class="PageNavigation">
+	      {% if page.previous.url %}
+	          <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+		    {% endif %}
+		      {% if page.next.url %}
+		          <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+			    {% endif %}
+		    </div>
 
   </body>
 
