@@ -1,10 +1,18 @@
 ---
 layout: default
 title: Project CLRS
+blogposts:
+ - test.html
 ---
 
 <html>
 	<body>
-		<H1>This page contains blogs about CLRS(Abbr. for Introduction to Algorithms)</H1>
+		<H1>blogs about CLRS(Abbr. for Introduction to Algorithms)</H1>
+
+		<div class="blogs">
+			{% for post in page.blogposts %}
+			<a href="http://iamayushanand.github.io/_site/assets/html/CLRS/{{post}}">{{post}}</a>
+			{% endfor %}
+		</div>
 	</body>
 </html>
