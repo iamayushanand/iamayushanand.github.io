@@ -4,7 +4,10 @@ layout: default
 ---
 
 
-
+<head>
+	{% assign post = site.posts.first %}
+	<meta http-equiv="refresh" content="0"; url="{{post.url}}" />
+</head>
 <title>{{ post.title }}</title>
 <div class="home">
   
