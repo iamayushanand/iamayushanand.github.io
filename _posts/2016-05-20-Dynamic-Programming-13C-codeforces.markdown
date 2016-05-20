@@ -31,10 +31,10 @@ We need to make an observation first.
 
 let's say an array b is a clone of a with the only diffrence that it is sorted and f(i,j) is the minimal number of moves required to make the first i numbers in the initial array non-decreasing with each of them at most b<sub>j</sub>.
 
-base case: it is obvious that f(1,1)= $$|a<sub>1</sub>-b<sub>1</sub> |$$
-when i=1: f(1,j)= min(f(1,j-1),|a<sub>j</sub>-b<sub>j</sub>|$$
-when j=1: f(i,1)= $$|a<sub>i</sub>-b<sub>1</sub>|$$ +f(i-1,1)
-when i,j>1:f(i,j)= min(f(i,j-1),f(i-1,j)+$$|a<sub>i</sub>-b<sub>j</sub>|$$
+base case: it is obvious that f(1,1)= &#124;a<sub>1</sub>-b<sub>1</sub> &#124;
+when i=1: f(1,j)= min(f(1,j-1),&#124;a<sub>j</sub>-b<sub>j</sub>&#124;
+when j=1: f(i,1)= &#124;a<sub>i</sub>-b<sub>1</sub>&#124; +f(i-1,1)
+when i,j>1:f(i,j)= min(f(i,j-1),f(i-1,j)+&#124;a<sub>i</sub>-b<sub>j</sub>&#124;
 
 <b><i>My code:-</i></b>
 {% highlight cpp %}
