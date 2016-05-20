@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Dynamic Programming 13C codeforces"
 categories: cp dp
 ---
