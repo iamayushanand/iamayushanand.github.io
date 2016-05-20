@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Dynamic Programming 13C codeforces
-category: cp dp
+categories: cp dp
 ---
 
 For the next couple of weeks I will be mainly focusing on improving my dynamic programming skills so today
