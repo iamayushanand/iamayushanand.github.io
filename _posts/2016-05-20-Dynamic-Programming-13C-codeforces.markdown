@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Dynamic Programming 13C codeforces
+title: "Dynamic Programming 13C codeforces"
 categories: cp dp
 ---
 
