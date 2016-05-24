@@ -38,14 +38,15 @@ using those 3 problems.
 
 
 
-
->! Suppose we knew how many digits of a and b we have in a good number then we can easily check weather the sum is also a good number(by using the formula inobservation 3).
->! if the sum is a good number then any all the distinct permutations of that number will also be an excellent number we can figure that out by C(n,# of a digts). However the problem is that we cannot generate C(n,k) by using pascal's triangle as that would be too inefficient so we can use modular inverse and fast exponentiation.
->! how?
->! well since MOD is a prime number we can use the fact that a<sup>-1</sup> = a<sup>MOD-2</sup> (the formula can be found [here](http://https://en.wikipedia.org/wiki/Modular_multiplicative_inverse "multiplicative inverse")).
->! now the formula for C(n,k) is fact(n)fact(n-k)<sup>-1</sup>fack(k)<sup>-1</sup>
->! now we can precompute factorials and use fast exponentiation to find the ans.
-
+<details>
+<summary>final solution</summary>
+Suppose we knew how many digits of a and b we have in a good number then we can easily check weather the sum is also a good number(by using the formula inobservation 3).
+if the sum is a good number then any all the distinct permutations of that number will also be an excellent number we can figure that out by C(n,# of a digts). However the problem is that we cannot generate C(n,k) by using pascal's triangle as that would be too inefficient so we can use modular inverse and fast exponentiation.
+how?
+well since MOD is a prime number we can use the fact that a<sup>-1</sup> = a<sup>MOD-2</sup> (the formula can be found [here](http://https://en.wikipedia.org/wiki/Modular_multiplicative_inverse "multiplicative inverse")).
+now the formula for C(n,k) is fact(n)fact(n-k)<sup>-1</sup>fack(k)<sup>-1</sup>
+now we can precompute factorials and use fast exponentiation to find the ans.
+</details>
 <b><i>My code:-</i></b>
 {% highlight cpp %}
 #include <math.h>
