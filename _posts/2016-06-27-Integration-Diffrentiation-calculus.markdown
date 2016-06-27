@@ -47,3 +47,8 @@ So our diffrentiation formula at a point x is:-
 ![Differentiation between points x<sub>0</sub> and x<sub>1</sub>](https://latex.codecogs.com/gif.latex?\lim_{x_1-x_0&space;\to&space;0&space;}&space;\frac{f(x_1)-f(x_0)}{x_1-x_0} "Differentiation between two points")
 
 
+Now to make our lifes easier mathematicians said that we do not need to use those formulas  instead we could develop simpler functions out of the f(x) which can determine the derivative at point x. We denote this function as f'(x) or the dervative of f(x). 
+
+So here are some of the common f'(x) of f(x):
+
+![power rule](https://latex.codecogs.com/gif.latex?\frac{\partial&space;(x^{n})&space;}{\partial&space;x}&space;=&space;nx^{n-1} "power rule")
