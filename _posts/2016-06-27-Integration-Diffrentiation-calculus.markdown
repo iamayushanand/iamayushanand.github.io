@@ -1,7 +1,7 @@
 ---
 title: "Integration and Differentiation"
 layout: post
-catrgories: misc other
+catrgories: misc other MISC
 ---
 
 Hi,
