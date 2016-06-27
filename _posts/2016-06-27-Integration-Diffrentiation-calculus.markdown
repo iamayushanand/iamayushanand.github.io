@@ -18,7 +18,7 @@ let us recall the definition of slope of a linear graph.
 
 ![slope equation](https://latex.codecogs.com/gif.latex?slope=\frac{y_1-y_0}{x_1-x_0} "slope equation: ")
 
-where x is any constant and y_0 = f(x_0) and same for y_1.
+where x is any constant and y<sub>0</sub> = f(x<sub>0</sub>) and same for y<sub>1</sub>.
 
 f(x) is a function which takes x as a input and gives it's y coordinate as an output. The slope at any point of a linear equation is always the same however that is not the case in a ""non linear equation"" for e.g sin x, cos x, x^2 , etc . As we can't find slope of the whole graph accurately we can find an approx. or average slope between A and B using the same formula.
 
