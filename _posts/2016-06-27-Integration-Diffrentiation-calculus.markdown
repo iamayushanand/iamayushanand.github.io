@@ -1,7 +1,7 @@
 ---
 title: "Integration and Differentiation"
 layout: post
-catrgories: misc
+catrgories: misc other
 ---
 
 Hi,
@@ -52,3 +52,5 @@ Now to make our lifes easier mathematicians said that we do not need to use thos
 So here are some of the common f'(x) of f(x):
 
 ![power rule](https://latex.codecogs.com/gif.latex?\frac{\partial&space;(x^{n})&space;}{\partial&space;x}&space;=&space;nx^{n-1} "power rule")
+
+
