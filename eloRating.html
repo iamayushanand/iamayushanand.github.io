@@ -26,8 +26,9 @@ title: fiitjee stats
 	<div id="RankGraph"></div>
 			<script>
 			var trace1 = {
+				var jsonstat=JSON.parse('http://iamayushanand.github.io/Stats.json');
 		  		x: [1, 2, 3, 4],
-		    		y: [17,29, 14, 19],
+		    		y: jsonstat[0]['ranks'],
 		      		type: 'scatter'
 		      };
 
