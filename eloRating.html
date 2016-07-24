@@ -26,18 +26,33 @@ title: fiitjee stats
 	</form>
 	<div id="RankGraph"></div>
 			<script>
-			var trace1 = {
-				var jsonstat=$.getJSON('http://iamayushanand.github.io/Stats.json');
-		  		x: [1, 2, 3, 4],
-		    		y: jsonstat[0]['ranks'],
-		      		type: 'scatter'
-		      };
+			function apicall(){
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange=function(){
+					if (xhttp.readyState == 4 && xhttp.status == 200) {
+					
+						success = true;
+						results = (JSON.parse(xhttp.responseText)).result;
+						process(results);
+					
+					}
+				};
+				xhttp.open("GET", 'http://iamayushanand.github.io', true);
+				xhttp.send();
+			}
+			function process(results){
+				var trace1 = {
+		  			x: [1, 2, 3],
+		    			y: results[0]['ranks'],
+		      			type: 'scatter'
+		      			};
 
 		      
 
-			var data = [trace1];
+					var data = [trace1];
 
-			Plotly.newPlot('RankGraph', data);
+					Plotly.newPlot('RankGraph', data);
+			}
 		</script>
 	
 		<!--	<img id="loading-gif" src="http://iamayushanand.github.io/assets/images/load.svg" alt=""></img> --!> 
