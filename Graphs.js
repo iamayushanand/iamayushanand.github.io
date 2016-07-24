@@ -12,4 +12,4 @@ var trace2 = {
 
 var data = [trace1, trace2];
 
-Plotly.newPlot('RankGraph', data);
+Plotly.newPlot('#RankGraph', data);
