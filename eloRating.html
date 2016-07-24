@@ -5,23 +5,6 @@ title: fiitjee stats
 <html>
 	<head>
 		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-		<script>
-			var trace1 = {
-		  		x: [1, 2, 3, 4],
-		    		y: [10, 15, 13, 17],
-		      		type: 'scatter'
-		      };
-
-		      var trace2 = {
-		        x: [1, 2, 3, 4],
-			  y: [16, 5, 11, 9],
-			    type: 'scatter'
-			    };
-
-			    var data = [trace1, trace2];
-
-			    Plotly.newPlot('RankGraph', data);
-		</script>
 		<style>
 			#id-input{
 				width: 60%;
@@ -41,6 +24,24 @@ title: fiitjee stats
 		<input type="text" id="id-input" class="form-control" placeholder="Type your id number with prefix 9170... and then press enter">
 	</form>
 	<div id="RankGraph"></div>
+			<script>
+			var trace1 = {
+		  		x: [1, 2, 3, 4],
+		    		y: [10, 15, 13, 17],
+		      		type: 'scatter'
+		      };
+
+		      var trace2 = {
+		        x: [1, 2, 3, 4],
+			  y: [16, 5, 11, 9],
+			    type: 'scatter'
+			    };
+
+			    var data = [trace1, trace2];
+
+			    Plotly.newPlot('RankGraph', data);
+		</script>
+	
 	<img id="loading-gif" src="http://iamayushanand.github.io/assets/images/load.svg" alt=""></img>
 
 	</body>
