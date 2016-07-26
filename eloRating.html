@@ -52,7 +52,7 @@ title: fiitjee stats
 		      			};
 
 		      $('#profilePic').html("<img class='img-thumbnail' height='150' width='150' src="+results['images'][document.getElementById('id-input').value]+"> </img>");
-					$('#profilePic').html("<H2>"+results['names'][document.getElementById('id-input').value]+"</H2>");
+					$('#profilePic').html("<H2>"+results['name'][document.getElementById('id-input').value]+"</H2>");
 					var data = [trace1];
 
 					Plotly.newPlot('RankGraph', data);
