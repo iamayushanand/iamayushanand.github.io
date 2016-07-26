@@ -12,7 +12,7 @@ title: fiitjee stats
 				margin-left: 20%;
 				margin-bottom:10px;
 			}
-			
+
 			form{
 				margin-bottom: 15px;
 			}
@@ -25,17 +25,20 @@ title: fiitjee stats
 		<input type="text" id="id-input" class="form-control" placeholder="Type your id number with prefix 9170... and then press enter">
 		<input type="button" value="see your stats" onclick="return apicall()">
 	</form>
+	<div id="profilePic">
+
+	</div>
 	<div id="RankGraph"></div>
 			<script>
 			function apicall(){
 				var xhttp = new XMLHttpRequest();
 				xhttp.onreadystatechange=function(){
 					if (xhttp.readyState == 4 && xhttp.status == 200) {
-					
+
 						success = true;
 						results = (JSON.parse(xhttp.responseText));
 						process(results);
-					
+
 					}
 				};
 				xhttp.open("GET", 'http://iamayushanand.github.io/Stats.json', true);
@@ -48,16 +51,16 @@ title: fiitjee stats
 		      			type: 'scatter'
 		      			};
 
-		      
+		      $('#profilePic').html("<img src="+results['images'][document.getElementById('id-input').value]+"> </img>")
 
 					var data = [trace1];
 
 					Plotly.newPlot('RankGraph', data);
 			}
-			
+
 		</script>
-	
-		<!--	<img id="loading-gif" src="http://iamayushanand.github.io/assets/images/load.svg" alt=""></img> --!> 
+
+		<!--	<img id="loading-gif" src="http://iamayushanand.github.io/assets/images/load.svg" alt=""></img> --!>
 
 	</body>
 </html>
