@@ -26,5 +26,24 @@ CNF stands for conjuctive normal form. In this form we have n number of variable
 
 In this case each clause consists of 1 element.The general form of this equation is :-
 
-f=x1 or x2 or x3 or ...
+f = x<sub>1</sub> ^ x<sub>2</sub> ^ ...
+
+Solving for this case is simple as we just have to check if the negation of an element x and x both are present in the sat formula.
+
+<b>2) 2-cnf-sat </b>
+
+In this case each clause consists of 2 elements. The general form of this equation is:-
+
+f = (x<sub>1</sub> v y<sub>1</sub>) ^ (x<sub>2</sub> v y<sub>2</sub>) ^ ...
+
+Solving this kind of sat formula is a bit harder than 1 sat.
+
+To solve such a problem we will construct a graph of 2n vertices where n is the number of boolean elements.
+
+We will draw an edge between 
+1) &#172;x<sub>i</sub> and y<sub>i</sub>
+1) &#172;y<sub>i</sub> and x<sub>i</sub>
+
+if both the negation and the variable itself are in the same Strongly Connected Component of graph then it is not satisfiable.This can be done efficiently using Kosaraju's algorithm for strongly connected components.
+
 
