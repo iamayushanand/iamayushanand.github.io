@@ -31,25 +31,6 @@
 			});
 
 		
-	$(document).ready(function() {
-		$('.dropdown').on('show.bs.dropdown', function(e){
-	    	$(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
-		});
-		$('.dropdown').on('hide.bs.dropdown', function(e){
-			$(this).find('.dropdown-menu').first().stop(true, true).slideUp(300);
-		});
-		$("#menu-toggle").click(function(e) {
-			e.preventDefault();
-			var elem = document.getElementById("sidebar-wrapper");
-			left = window.getComputedStyle(elem,null).getPropertyValue("left");
-			if(left == "200px"){
-				document.getElementsByClassName("sidebar-toggle")[0].style.left="-200px";
-			}
-			else if(left == "-200px"){
-				document.getElementsByClassName("sidebar-toggle")[0].style.left="200px";
-			}
-		});
-	});			
 	
 		</script>
 
@@ -82,25 +63,6 @@
 		<div class="content"  style="position: fixed; top: 0%; z-index: -1"><h2 id="SideTitle">NSEJS MATHS</h2></div>	
 		
 
-		<nav class="navbar navbar-default" style="z-index:-3;" role="navigation">
-		<div class="container">
-		<div id="sidebar-wrapper" class="sidebar-toggle">
-		
-		
-			<ul class="sidebar-nav">
-		    	<li>
-		      		<a href="#item1">Item 1</a>
-		    	</li>
-		    	<li>
-		      		<a href="#item2">Item 2</a>
-		    	</li>
-		    	<li>
-		      		<a href="#item3">Item 3</a>
-		    	</li>
-		  	</ul>
-		</div>
-  	</div>
-	</nav>
- 
+	 
 	</body>
 </html>
