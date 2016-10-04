@@ -10,9 +10,9 @@
 	font-size:20px;
 }
 .profile{
-	position: absolute;
-	top: 50%;
-	margin-left: 20%;
+	position: relative;
+	top: 65%;
+	margin-left: 30%;
 }
 
 
