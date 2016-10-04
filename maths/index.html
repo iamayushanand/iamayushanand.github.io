@@ -19,11 +19,11 @@
 					if(scrollPercent >= 0){
 						target.css('opacity', scrollPercent);
 					}
-					if(scrollPercent*100<=100){$(".testing").css('position','fixed');
-					$(".testing").css('top','0%');
+					if(scrollPercent*100<=100){$(".content").css('position','fixed');
+					$(".content").css('top','0%');
 					}
-					else{$(".testing").css('position','relative');
-						$(".testing").css('top','100%');
+					else{$(".content").css('position','relative');
+						$(".content").css('top','100%');
 					}
 					
 				});
@@ -57,7 +57,13 @@
 			<H1 style="color: white;font-size:30px;margin-top:30%;text-align:center; min-height: 200%">Solutions to Math problems for nsejs</H1>
 			<H1 style="color: white;font-size:30px;margin-top:30%;text-align:center; min-height: 200%">Solutions to Math problems for nsejs</H1>
 		</div>
-		<div class="testing"  style="position: fixed; top: 0%; z-index: -1"><h2 id="SideTitle">nsejs</h2></div>	
-		
+		<div class="content"  style="position: fixed; top: 0%; z-index: -1"><h2 id="SideTitle">NSEJS MATHS</h2></div>	
+		<div class="sidenav content">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  			<a href="#">About</a>
+  			<a href="#">Services</a>
+ 			<a href="#">Clients</a>
+  			<a href="#">Contact</a>
+		</div> 
 	</body>
 </html>
