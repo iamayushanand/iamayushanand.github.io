@@ -29,6 +29,36 @@
 				});
 					
 			});
+
+			$(window).resize(function() {
+		var path = $(this);
+		var contW = path.width();
+		if(contW >= 751){
+			document.getElementsByClassName("sidebar-toggle")[0].style.left="200px";
+		}else{
+			document.getElementsByClassName("sidebar-toggle")[0].style.left="-200px";
+		}
+	});
+	$(document).ready(function() {
+		$('.dropdown').on('show.bs.dropdown', function(e){
+	    	$(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
+		});
+		$('.dropdown').on('hide.bs.dropdown', function(e){
+			$(this).find('.dropdown-menu').first().stop(true, true).slideUp(300);
+		});
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			var elem = document.getElementById("sidebar-wrapper");
+			left = window.getComputedStyle(elem,null).getPropertyValue("left");
+			if(left == "200px"){
+				document.getElementsByClassName("sidebar-toggle")[0].style.left="-200px";
+			}
+			else if(left == "-200px"){
+				document.getElementsByClassName("sidebar-toggle")[0].style.left="200px";
+			}
+		});
+	});			
+	
 		</script>
 
 	</head>
@@ -58,12 +88,36 @@
 			<H1 style="color: white;font-size:30px;margin-top:30%;text-align:center; min-height: 200%">Solutions to Math problems for nsejs</H1>
 		</div>
 		<div class="content"  style="position: fixed; top: 0%; z-index: -1"><h2 id="SideTitle">NSEJS MATHS</h2></div>	
-		<div class="sidenav content">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  			<a href="#">About</a>
-  			<a href="#">Services</a>
- 			<a href="#">Clients</a>
-  			<a href="#">Contact</a>
-		</div> 
+		
+
+		<nav class="navbar navbar-default" style="z-index:-3;" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a id="menu-toggle" href="#" class="navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			</a>
+  			<a class="navbar-brand" href="home.xhtml">
+  				logo
+  			</a>
+		</div>
+		<div id="sidebar-wrapper" class="sidebar-toggle">
+			<ul class="sidebar-nav">
+		    	<li>
+		      		<a href="#item1">Item 1</a>
+		    	</li>
+		    	<li>
+		      		<a href="#item2">Item 2</a>
+		    	</li>
+		    	<li>
+		      		<a href="#item3">Item 3</a>
+		    	</li>
+		  	</ul>
+		</div>
+  	</div>
+	</nav>
+ 
 	</body>
 </html>
