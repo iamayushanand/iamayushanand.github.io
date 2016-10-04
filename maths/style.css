@@ -1,0 +1,11 @@
+.jumbotron{
+	width: 100%; 
+	height: 100%;
+	left: 0px;
+	background:url('http://iamayushanand.github.io/maths/Blocks-Mathematics-wallpaper.jpg');
+	z-index:3;
+}
+#SideTitle{
+	color:red;
+	font-size:20px;
+}
