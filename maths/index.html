@@ -15,14 +15,14 @@
 				var target = $('.jumbotron');
 				var targetHeight = target.outerHeight();
 				$(document).scroll(function(e){
-					var scrollPercent = (targetHeight - window.scrollY) / targetHeight;
+					var scrollPercent = ((targetHeight - window.scrollY) )/ targetHeight;
 					if(scrollPercent >= 0){
 						target.css('opacity', scrollPercent);
 					}
-					if(scrollPercent<=100){target.css('position','relative');
+					if(scrollPercent*100<=100){$(".testing").css('position','fixed');
 					$(".testing").css('top','0%');
 					}
-					else{target.css('position','fixed');
+					else{$(".testing").css('position','relative');
 						$(".testing").css('top','100%');
 					}
 					
@@ -34,7 +34,7 @@
 	</head>
 	<body>
 
-		<div class="jumbotron" tabindex="-1" style="width: 100%; height: 100%; top: 27px;left: 0px;background:url('http://iamayushanand.github.io/maths/Blocks-Mathematics-wallpaper.jpg');z-index:3;">
+		<div class="jumbotron" tabindex="-1" style="width: 100%; height: 100%;left: 0px;background:url('http://iamayushanand.github.io/maths/Blocks-Mathematics-wallpaper.jpg');z-index:3;">
 			<H1 style="color: white;font-size:30px;margin-top:30%;text-align:center; min-height: 200%">Solutions to Math problems for nsejs</H1>
 			<H1 style="color: white;font-size:30px;margin-top:30%;text-align:center; min-height: 200%">Solutions to Math problems for nsejs</H1>
 			<H1 style="color: white;font-size:30px;margin-top:30%;text-align:center; min-height: 200%">Solutions to Math problems for nsejs</H1>
