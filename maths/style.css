@@ -32,7 +32,7 @@ div.vertical-line{
   margin-left:20%;
   position: fixed;
   top: 0%;
-  z-index:20;
+  z-index:-1;
 }
 
 li a {
