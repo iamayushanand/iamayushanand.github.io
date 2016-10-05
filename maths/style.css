@@ -41,7 +41,7 @@ li a {
     padding: 8px 16px;
     text-decoration: none;
     margin: 0 0 10px 0;
-    background: linear-gradient(to right, white 50%, dark pink 50%);
+    background: linear-gradient(to right, white 50%, pinkred 50%);
     background-size: 200% 100%;
     background-position:left bottom;
     transition:all 2s ease;
