@@ -21,7 +21,16 @@
 	z-index:-1;
         
 }
-
+.motive{
+	margin-left:20%;
+	top: 10%;
+	z-index:-2;
+}
+.HowTo{
+	margin-left: 20%;
+	top: 40%;
+	z-index: -2;
+}
 div.vertical-line{
   width: 1px;
   height: 200%;
