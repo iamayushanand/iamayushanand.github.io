@@ -24,10 +24,9 @@
 
 div.vertical-line{
   width: 1px;
-  background-color: silver;
   height: 200%;
   float: left;
-  border: 2px ridge silver ;
+  border: 1px ridge gainsboro ;
   border-radius: 2px;
   margin-left:16%;
   position: fixed;
