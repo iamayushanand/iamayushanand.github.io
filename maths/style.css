@@ -31,7 +31,7 @@ div.vertical-line{
   border-radius: 2px;
   margin-left:20%;
   position: fixed;
-  top: 100%;
+  top: 0%;
   z-index:20;
 }
 
