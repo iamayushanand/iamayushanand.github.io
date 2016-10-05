@@ -41,11 +41,16 @@ li a {
     padding: 8px 16px;
     text-decoration: none;
     margin: 0 0 10px 0;
+    background: linear-gradient(to right, red 50%, blue 50%);
+    background-size: 200% 100%;
+    background-position:left bottom;
 }
+
 
 li a:hover {
     background-color: #555;
     color: white;
+    background-position:right bottom;
     
 }
 
