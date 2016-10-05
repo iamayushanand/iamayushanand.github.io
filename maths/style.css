@@ -19,7 +19,16 @@
 	position: fixed;
 	top: 30%;
 	z-index:-1;
-        border-left:thick solid ##ff0000;
+        
+}
+
+div.vertical-line{
+  width: 1px;
+  background-color: silver;
+  height: 100%;
+  float: left;
+  border: 2px ridge silver ;
+  border-radius: 2px;
 }
 
 li a {
