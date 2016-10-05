@@ -19,7 +19,7 @@
 	position: fixed;
 	top: 30%;
 	z-index:-1;
-        border-left:1px solid rgba(0,0,0,0.1);
+        border-left:thick solid ##ff0000;
 }
 
 li a {
