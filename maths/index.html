@@ -16,10 +16,11 @@
 				var targetHeight = target.outerHeight();
 				$(document).scroll(function(e){
 					var scrollPercent = ((targetHeight - window.scrollY) )/ targetHeight;
+					var scrollPercentTwo=($('body').outerHeight()-window.scrollY)/$('body').outerHeight();
 					if(scrollPercent >= 0){
 						target.css('opacity', scrollPercent);
 					}
-					if(scrollPercent*100<=100){$(".content").css('position','fixed');
+					if(scrollPercentTwo*100<=100){$(".content").css('position','fixed');
 					$(".content").css('top','0%');
 					}
 					else{
