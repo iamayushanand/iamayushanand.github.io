@@ -17,6 +17,6 @@
 
 .sidebar{
 	position: fixed;
-	top: 50%;
+	top: 30%;
 	z-index:-1;
 }
