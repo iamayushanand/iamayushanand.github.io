@@ -31,6 +31,8 @@ div.vertical-line{
   border-radius: 2px;
   margin-left:20%;
   position: fixed;
+  top: 20%;
+  z-index:20;
 }
 
 li a {
