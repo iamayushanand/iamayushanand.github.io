@@ -6,7 +6,6 @@ title: Irodov Radioactivity solutions
 Here are my attempts to the problems from 215 to 228 given in irodov in the chapter radioactivity.If there are any mistakes please email me at iamayushanand@gmail.com.
 
 ![page 1](http://iamayushanand.github.io/assets/images/physics1.jpeg)
-
 ![page 2](http://iamayushanand.github.io/assets/images/physics2.jpeg)
 ![page 3](http://iamayushanand.github.io/assets/images/physics3.jpeg)
 ![page 4](http://iamayushanand.github.io/assets/images/physics4.jpeg)
