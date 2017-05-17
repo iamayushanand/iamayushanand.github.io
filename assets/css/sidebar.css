@@ -5,6 +5,7 @@
   padding-top: 20px;
   background-color: black;
   position: fixed;
+  overflow-y:scroll;
 }
 
 .nav > li > a:focus, .nav > li > a:hover  {
