@@ -22,10 +22,10 @@
 		margin-left:-200px;	
 	}
 
-	.img-circle.adjustimgxs{
-		margin-left:50px;
+	.adjustimgxs{
+		margin-left:50px!important;
 	}
-	.links.adjustlinkxs{
-		margin-left: 20px;
+	.adjustlinkxs{
+		margin-left: 20px!important;
 	}
 }
