@@ -16,3 +16,9 @@
 .icon-bar{
 	background-color:white;
 }
+
+@media only screen and (min-width: 480px){
+	.adjustconxs{
+		margin-left:-200px;	
+	}
+}
