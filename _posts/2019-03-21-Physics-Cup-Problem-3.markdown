@@ -1,7 +1,7 @@
 ---
 title: Physics Cup Problem 3
 layout: post
-categories: MISC
+categories: misc other MISC
 ---
 
 <embed src="http://iamayushanand.github.io/assets/pdfs/phycupprob3.pdf" width="700" height="700">
