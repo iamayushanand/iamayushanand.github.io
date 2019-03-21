@@ -4,6 +4,6 @@ layout: post
 categories: misc
 ---
 
-<iframe id="iframepdf" src="http://iamayushanand.github.io/assets/pdfs/phycupprob3.pdf" width="700" height="700"></iframe>
+<iframe id="iframepdf" src="http://iamayushanand.github.io/assets/pdfs/phycupprob3.pdf" class="col-md-12 col-sm-12 col-xs-12" height="700"></iframe>
 
 
