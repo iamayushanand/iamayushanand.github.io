@@ -18,11 +18,11 @@
 
 .PageNavigation .next {
 	text-align: right;
-	margin-left: 50%;
+	float:right;
 	position: relative;
 }
 .PageNavigation .prev {
-  margin-left: 35%;
+  float:left;
   position: relative;
 }
 
@@ -40,7 +40,7 @@
     </div>
 
     <!--    {% include footer.html %} --!>
-    <div class="PageNavigation">
+    <div class="PageNavigation col-md-offset-4 col-sm-offset-6 col-xs-offset-6">
 	      {% if page.previous.url %}
 	          <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
 		    {% endif %}
