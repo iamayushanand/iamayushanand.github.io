@@ -100,7 +100,23 @@ for x in range(3000,6000):
                 #print r.headers['content-length']
                 #WriteFile=open('nse.html','a')
                 #WriteFile.write(r.content)
-                #if int(r.headers['content-length'])&gt4004:
+                #if int(r.headers['content-length'])&lt4004:
+                #print r.headers['content-length']
+                #WriteFile=open('nse.html','a')
+                #WriteFile.write(r.content)
+                #if int(r.headers['content-length'])&lt4004:
+                #    WriteFile=open('outputofscrapper22.out','a')
+                #    #WriteFile.write(r.content)
+                #    WriteFile.write("success "+x.rstrip()+" "+(d1+timedelta(days=i)).strftime('%d/%m/%Y'))
+                #    print "success "+x.rstrip()+" "+(d1+timedelta(days=i)).strftime('%d/%m/%Y')
+                #    print x.rstrip()
+                #    break
+                    #print (d1+timedelta(days=i)).strftime('%d/%m/%Y')
+                    #print (d1+timedelta(days=i)).strftime('%d/%m/%Y')
+                    
+    except Exception:
+        print str(x)+" is correct"
+        pass
 			
 			
 			</code></pre>
