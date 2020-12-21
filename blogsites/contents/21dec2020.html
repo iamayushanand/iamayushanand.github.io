@@ -1,0 +1,95 @@
+<h1>How to make a Bot in discord(or Anywhere)!</h1>
+<h2>The basic idea</h2>
+<p>A bot is just like a normal user with one key difference, There is no human action involved in sending the messages via a bot. Let us look at all the processes that happen when a human user sends a simple text message on discord(or in general anywhere).</p>
+<ul class="list-group list-group-flush">
+  	<li class="list-group-item">User types his message on his computer</li>
+    	<li class="list-group-item">The discord webpage loaded on the users computer takes the input and decorates it by adding authentication keys,nonce,etc to prepare a request header</li>
+      	<li class="list-group-item">The request header is sent over the internet to the Discords Server(somewhere in USA probably)</li>
+	<li class="list-group-item">Discords server reads the packet and does the cryptographic authentication and then posts your message</li>
+</ul>
+<p>The bot only replaces the first step of this process.One way to do that is to programmatically send the outgoing request is step 2 without the intervention of discord webpage in the process.To do that we first need to know the authentication keys and all of the data which is actually being sent in the request packet, to see that toggle the development tools of your browser and headover to the "networks" tab.Then send a sample message on discord and you should notice that there is a request named "messages" in the networks tab.Click on it and you will be able to see your authentication, your message and all the data that the discord webapp sends to the discord server.If you are on a linux distro or MAC at this point you could just right click on that request and "copy as curl" then paste the request in terminal.After doing that change the "nonce" (like by +5) my guess is that it is somesort of a tag which discord uses to keep track of messages.Then hit enter and bingo the same random message would be sent again.</p>
+<hr>
+<p>We just simulate the same request by using python(it can be done in any language). Here is the code</p>
+<pre><code>
+import requests
+import csv
+import time
+session=requests.session();
+chnl="*****************"
+def SndMsg(msg,currtok):
+    APIURL="https://discord.com/api/v8/channels/"+chnl+"/messages"
+    header={
+            'authority':'discord.com',
+            'method':'POST',
+            'path':'/api/v8/channels/*********/messages',
+            'scheme':'https',
+            'accept':'*/*',
+            'accept-encoding':'gzip, deflate',
+            'accept-language':'en-US',
+            'authorization':'************************',
+            'content-type': 'application/json',
+            'cookie':'__cfduid=********; locale=en-US',
+            'origin':'https://discord.com',
+            'referer':'https://discord.com/channels/********/********',
+            'sec-fetch-mode':'cors',
+            'sec-fetch-site':'same-origin',
+            'user-agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) discord/0.0.259 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36',
+            'x-super-properties':'*********************************************************************************',
+
+            }
+    payload='{"content":"'+msg+'","nonce":"'+str(currtok)+'","tts": false}'
+    r = session.post(APIURL,data=payload,headers=header)
+    print r.content
+def LsnMsg():
+    APIURL="https://discord.com/api/v8/channels/"+chnl+"/messages?limit=1"
+    header={
+            'authority':'discord.com',
+            'method':'POST',
+            'path':'/api/v8/channels/*******************/messages',
+            'scheme':'https',
+            'accept':'*/*',
+            'accept-encoding':'gzip, deflate',
+            'accept-language':'en-US',
+            'authorization':'***********************************',
+            'content-type': 'application/json',
+            'cookie':'__cfduid=***************************; locale=en-US',
+            'origin':'https://discord.com',
+            'referer':'https://discord.com/channels/***********/**********',
+            'sec-fetch-mode':'cors',
+            'sec-fetch-site':'same-origin',
+            'user-agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) discord/0.0.259 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36',
+            'x-super-properties':'******************************************************',
+
+            }
+    r = session.get(APIURL,headers=header)
+    return r.json()[0]
+
+currtok=7818210188795576171;
+while 1==1:
+    resp=LsnMsg()
+    comnd=resp['content'].split(' ')
+    if resp['content']=="!hello":
+        SndMsg("hi "+resp['author']['username'],currtok)
+    if comnd[0]=="!find":
+        with open("contacts.csv") as contacts:
+            csvreader=csv.reader(contacts)
+            fields=next(csvreader)
+            for row in csvreader:
+                if comnd[1] in row[0]:
+                    SndMsg(row[0],currtok)
+                    time.sleep(1);
+                    currtok+=1
+
+
+    currtok+=1
+
+</code></pre>
+
+<p>The 'currtok' variable above is basically the nonce and all fields marked '***********' can be found by checking the networks tab in your developers tool</p>
+<p>To test it just send a message '!hello' in the discord server</p>
+<p>The above method will work on any social media platform</p>
+
+<h2>Where does discord.py come in</h2>
+<p>Whatever we did above involved the use of your own personal account and the user authorisation keys.It also takes more effort to make a bot using pure http GET and POST requests as we have to manually put in a lot of boilerplate inputs which we ideally shouldn't. Discord provides its own support of bots so we can further avoid the clutter by not manually doing GET and POST and let the discord api do the same. Check this link out to know how to setup the API in python <a href="https://realpython.com/how-to-make-a-discord-bot-python/">here</a>.
+</p>
+

@@ -1,0 +1,4 @@
+
+namespace Engine{
+	int createBlog();
+}
